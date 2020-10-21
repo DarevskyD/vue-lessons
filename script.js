@@ -1,6 +1,9 @@
 var vue = new Vue ({
   el: '#app',
   data: {
-    message: 'hello world'
+    message: 'true message',
+    view: true,
+    message1: '',
+    checked: 'true'
   }
 })
