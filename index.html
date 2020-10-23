@@ -24,9 +24,10 @@
 
         <div class="container">
             <h1>{{ title }}</h1>
-            <button v-bind:class="[sizeToggle ? 'large' : '', {'rounded' : isRounded}]" 
-                    v-bind:style="styles" 
-                    v-bind:disabled="disabled">Start</button>
+            <button :class="[sizeToggle ? 'large' : '', {'rounded' : isRounded}]" 
+                    :style="styles" 
+                    :disabled="disabled">Start
+            </button>
             <ul>
                 <li><input type="checkbox" v-model="sizeToggle"><label for="">Size button</label></li>
                 <li><input type="checkbox" v-model="isRounded"><label for="">Rounded</label></li>
