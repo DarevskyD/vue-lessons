@@ -11,7 +11,17 @@ var vue = new Vue ({
     isRounded: false,
     disabled: false,
     fontColor: 'grey',
-    backgroundColor: "light-blue"
+    backgroundColor: "light-blue",
+
+    show: false,
+
+    title1: 'Task List',
+    items: [
+      {text: 'First'},
+      {text: 'Second'},
+      {text: 'First'},
+      {text: 'Second'}
+    ]
   },
   methods: {
     countUp: function () {
@@ -22,6 +32,19 @@ var vue = new Vue ({
     },
     cleanerUrl: function () {
       this.cleanUrl = this.url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+    },
+    addItem: function () {
+      var input = document.getElementById('itemForm');
+
+      if (input.value !== '') {
+        this.items.push({
+          text:input.value
+        });
+        input.value = "";
+      }
+    },
+    deleteItem: function (index) {
+      this.items.splice(index, 1);
     }
   },
   computed: {
