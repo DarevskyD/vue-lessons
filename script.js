@@ -21,6 +21,14 @@ var vue = new Vue ({
       {text: 'Second'},
       {text: 'First'},
       {text: 'Second'}
+    ],
+
+    items1: [
+      'HOME',
+      'ABOUT',
+      'BLOG',
+      'MAP',
+      'CONTACTS'
     ]
   },
   methods: {

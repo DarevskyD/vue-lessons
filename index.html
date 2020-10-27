@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -36,12 +37,14 @@
                 <li><input type="text" v-model="backgroundColor"></li>
             </ul>
         </div>
+
         <div class="container">
             <button @click="show = !show" class="btn btn-primary">Toggle</button>
             <transition name="newanim">
                 <div class="box" v-if="show">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem cum quas rerum quaerat et mollitia non incidunt delectus rem provident!</div>              
             </transition>
         </div>
+
         <div class="container">
             <header><h1>{{ title1 }}</h1></header>
             <form class="form">
@@ -64,6 +67,20 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+
+        <div class="container menu-list-container">
+          <nav>
+            <transition name="fade" mode="out-in">
+              <i class="material-icons menu" v-if="!show" @click="show = !show" key="menu">menu</i>
+              <i class="material-icons clear" v-else @click="show = !show" key="clear">clear</i>            
+            </transition>
+            <transition name="fade">
+              <ul v-if="show" class="menu-list-ul">
+                <li v-for="item in items1" class="menu-list-li">{{ item }}</li>
+              </ul>
+            </transition>
+          </nav>
         </div>              
     </div>
     
