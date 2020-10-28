@@ -31,7 +31,10 @@ var vue = new Vue ({
       'CONTACTS'
     ],
 
-    message: ''
+    message: '',
+
+    showPass: false,
+    password: '1aD234b1'
   },
   methods: {
     countUp: function () {
