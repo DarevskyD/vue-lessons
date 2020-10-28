@@ -13,6 +13,7 @@ var vue = new Vue ({
     fontColor: 'grey',
     backgroundColor: "light-blue",
 
+    showClick: false,
     show: false,
 
     title1: 'Task List',
