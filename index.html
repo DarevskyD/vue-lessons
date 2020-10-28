@@ -19,7 +19,7 @@
 
         <div class="container">
             <h1>URL: <a v-bind:href="url">{{ cleanUrl }}</a></h1>
-            <input type="text" class="form-control" v-model="url">
+            <input type="text" class="form-control" v-model="url" placeholder="https://youtube.com/">
             <button @click="cleanerUrl" class="btn btn-primary">Clean URL</button>
         </div>
 
