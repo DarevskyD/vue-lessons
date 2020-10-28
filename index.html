@@ -81,7 +81,13 @@
               </ul>
             </transition>
           </nav>
-        </div>              
+        </div>
+        
+        <div class="container container-reverse">
+          <p>{{ message }}</p>
+          <input type="text" placeholder="Enter your text" v-model="message">
+          <button @click="reverseMessage">Reverse</button>
+        </div>
     </div>
     
     

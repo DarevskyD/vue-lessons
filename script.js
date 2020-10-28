@@ -29,7 +29,9 @@ var vue = new Vue ({
       'BLOG',
       'MAP',
       'CONTACTS'
-    ]
+    ],
+
+    message: ''
   },
   methods: {
     countUp: function () {
@@ -53,6 +55,9 @@ var vue = new Vue ({
     },
     deleteItem: function (index) {
       this.items.splice(index, 1);
+    },
+    reverseMessage: function () {
+      this.message = this.message.split('').reverse().join('');
     }
   },
   computed: {
