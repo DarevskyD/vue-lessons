@@ -39,9 +39,9 @@
         </div>
 
         <div class="container">
-            <button @click="show = !show" class="btn btn-primary">Toggle</button>
+            <button @click="showClick = !showClick" class="btn btn-primary">Toggle</button>
             <transition name="newanim">
-                <div class="box" v-if="show">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem cum quas rerum quaerat et mollitia non incidunt delectus rem provident!</div>              
+                <div class="box" v-if="showClick">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem cum quas rerum quaerat et mollitia non incidunt delectus rem provident!</div>              
             </transition>
         </div>
 
@@ -99,11 +99,9 @@
             </button>       
           </div>
         </div>
-    </div>   
-    
+    </div>    
     
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    https://cdnjs.cloudflare.com/ajax/lib...
     <script src="script.js"></script>
 </body>
 </html>
